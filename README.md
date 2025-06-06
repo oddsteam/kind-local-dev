@@ -20,7 +20,14 @@ kind create cluster --config kind-portmapping.yaml --name kind-portmap
 ```
 kubectl apply -f httpbin-deployment.yaml
 ```
+```
+  kubectl create namespace ingress-nginx
+```
+```
+kind create cluster --config kind-ingress.yaml --name kind-ingress
 
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.0/deploy/static/provider/kind/deploy.yaml
+```
 # Loading an Image Into Your Cluster
 Docker images can be loaded into your cluster nodes with:
 ```
