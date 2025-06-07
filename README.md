@@ -33,3 +33,8 @@ Docker images can be loaded into your cluster nodes with:
 ```
 kind load docker-image my-custom-image-0 my-custom-image-1
 ```
+
+
+```
+kubectl port-forward service/web-server-service 8080:80
+```
